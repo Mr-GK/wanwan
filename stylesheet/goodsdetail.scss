@@ -1,0 +1,634 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,input,textarea,button,select{padding:0;margin:0}
+body{font:12px/20px "微软雅黑","simsun";color:#333;/*overflow-x:hidden;*/}
+img{vertical-align:middle;border:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none;color:#333;}
+a:visited{color:#666;}
+a:hover{color:#b28247 !important;}
+input:focus,textarea:focus,button:focus{outline: none;}
+input[type="button"],input[type="submit"],input[type="file"],input[type="reset"],button{cursor:pointer;}
+/*********************common***************************/
+.cl:after{content:"";display:block;clear:both;overflow:hidden;height:0;visibility:hidden;}
+.cl{zoom:1;}
+.gwidth{width: 1200px;margin: auto;}
+.text-overflow{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.block{display:block;}
+
+.detail_con{
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    zoom: 1;
+    margin-top: 15px;
+    .imgbox{
+            width: 480px;
+            float: left;
+            table{
+                border-collapse: collapse;
+                 border: 0;
+                tr{
+                        border: none;
+                        text-align: left;
+                        td{
+                            position: relative;
+                            border: 0;
+                            #s_box{
+                                    width: 478px;
+                                    height: 478px;
+                                    position: relative;
+                                    left: 0;
+                                    top: 0;
+                                    img{
+                                        height: 478px;
+                                    }
+                                }
+                                #s_box .position_box{
+//                                  width: 100px;
+//                                  height: 120px;
+                                    width: 0px;
+                                    height: 0px;
+                                    background: #b6b6b6;
+                                    opacity: 0.6;
+                                    position: absolute;
+                                    left: 60;
+                                    top: 0;
+                                    z-index: 1;
+                                    display: none;
+                                }
+                                #s_box .mark_box{
+                                    width: 375px;
+                                    height: 478px;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    z-index: 10;
+                                    cursor: crosshair;
+                                }
+                                #b_box{
+//                                  width: 478px;
+//                                  height: 478px;
+                                    width: 0;
+                                    height: 0;
+                                    overflow: hidden;
+                                    position: absolute;
+                                    background-color: #fff;
+                                    border: 1px solid #666666;
+                                    border-radius: 5px;
+                                    left: 500px;
+                                    top: 0px;
+                                    display: block;
+                                    z-index: 100;
+                                }
+                                #b_box_all{
+                                    position: absolute;
+                                    width: 1200px;
+                                    height: 900px; 
+                                    left: 0;
+                                    img{
+                                        height: 100%;
+                                    }
+                                }
+//                          .shadow{
+//                                   width: 478px;
+//                                  height: 478px;
+//                                  opacity: 0;
+//                                  position: absolute;
+//                                  left: 50px;
+//                                  top: 0;
+//                                  z-index: 15;
+//                              }
+//                          .imgzoom{
+//                              border: solid 1px #EAEAEA;
+//                              width: 478px;
+//                              height: 478px;
+//                              overflow: hidden;
+//                              text-align: center;
+//                              position: relative;
+//                              padding: 0;
+//                              img{
+//                                      position: absolute;
+//                                      left: 0px;
+//                                      top: 0px;
+//                                      right: 0px;
+//                                      bottom: 0px;
+//                                      margin: auto;
+//                                      width: auto;
+//                                      height: 100%;
+//                              }
+//                              .position_box{
+//                                  width: 90px;
+//                                  height: 120px;
+//                                  background: #b6b6b6;
+////                                  background: #000;
+//                                  opacity: 0.6;
+//                                  position: absolute;
+//                                  left: 50px;
+//                                  top: 0;
+//                                  z-index: 100;
+//                                  display: none;
+//                              }
+//                              .mark_box{
+//                                  width: 375px;
+//                                  height: 478px;
+//                                  position: absolute;
+//                                  left: 50px;
+//                                  top: 0;
+//                                  z-index: 10;
+//                              }
+//                          }
+//                          #b_box{
+//                              width: 300px;
+//                              height: 400px;
+//                              overflow: hidden;
+//                              position: absolute;
+//                              left: 500px;
+//                              top: 40px;
+//                              border: 2px solid #666666;
+//                              display: block;
+//                              z-index: 500;
+//                          }
+//                          #b_box_all{
+//                              position: absolute;
+//                              width:800px;
+//                              height: 1200px; 
+//                              left: 0;
+//                              img{
+//                                  width: 100%;
+//                              }
+//                          }
+                            .switchpic{
+                                    display: block;
+                                    overflow: hidden;
+                                    width: 480px;
+                                    padding: 25px 0;
+                                    position: relative;
+                                    /* background: #F0F6F9; */
+//                                  border: 1px solid #346F97; 
+                                    .left_a{
+                                            position: absolute;
+                                            top: 25px;
+                                            left: 0;
+                                            width: 15px;
+                                            height: 87px;
+                                            cursor: pointer;
+                                            background: #f2f2f2 url(../images/brandstore_share.png) no-repeat -32px -362px;
+//                                          background-color: #f2f2f2;
+                                            z-index: 2;
+                                    }
+                                    .right_a{
+                                            position: absolute;
+                                            top: 25px;
+                                            right: 0;
+                                            width: 15px;
+                                            height: 87px;
+                                            cursor: pointer;
+                                            background: transparent url(../images/brandstore_share.png) no-repeat -73px -362px;
+                                            background-color: #f2f2f2;
+                                            z-index: 2;
+                                    }
+                                    .picclip{
+                                        width: 500px;
+                                        height: 87px;
+                                        padding-left: 13px;
+                                        z-index: 1;
+                                        padding: 0;
+                                        margin: 0;
+                                        overflow: hidden;
+                                        position: relative;
+                                        .picbox{
+                                                position: absolute;
+                                                overflow: hidden;
+                                                width: 100%;
+                                                height: 100%;
+//                                              background-color: #000000;
+                                                .showpic{
+                                                        z-index: 1;
+                                                        overflow: hidden;
+                                                        position: relative;
+                                                        top: 0;
+                                                        left: 20px;
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        .singlepic{
+                                                            float: left;
+                                                            display: inline-block;
+                                                            width: 85px;
+                                                            height: 87px;
+                                                            padding: 0 3px;
+                                                            .gimg_wrap{
+                                                                    height: 85px;
+                                                                    width: 83px;
+                                                                    overflow: hidden;
+                                                                    position: relative;
+                                                                    border: 1px solid #ccc;
+                                                                    img{
+                                                                            width: 85px;
+                                                                            height: 85px;
+                                                                            margin: 0 auto;
+                                                                    }
+                                                            }
+                                                        }
+                                                }
+                                        }
+                                    }
+                            }
+                        }
+
+                }
+            }
+    }
+    .goodsinfo{
+            width: 560px;
+            min-height: 615px;
+            overflow: hidden;
+            float: left;
+            padding-left: 60px;
+            overflow-x: hidden;
+            .goodsinfo_top{
+                position: relative;
+                width: 100%;
+                .goodsinfo_top1{
+                        border-bottom: 1px dotted #bfbfbf;
+                        width: 100%;
+                        overflow: hidden;
+                        zoom: 1;
+                        .goodsinfo_top1_dd1,.goodsinfo_top1_dd2{
+                            line-height: 30px;
+                            font-size: 18px;
+                            a{
+                                color: #999;
+                            }
+
+                        }
+                        .goodsinfo_top1_dd2{
+                            a{
+                                color: #000;
+                            }  
+                        }
+                        .goodsinfo_top1_dd3{
+                            line-height: 30px;
+                            color: #999;
+                        }
+                }
+                .goodsinfo_top2{
+                        position: relative;
+                        padding: 10px 0 10px;
+                        border-bottom: 0 none;
+                        height: 37px;
+                        span:first-child{
+                                float: left;
+                                color: #c8a985;
+                                font-size: 28px;
+                                line-height: 34px;
+                        }
+                        span:nth-child(2){
+                                float: left;
+                                line-height: 37px;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                                color: #999;
+                                font-size: 16px;
+                                text-decoration: line-through;
+                                margin-left: 5px;
+                        }
+                        span:nth-child(3){
+                                top:7px;
+                                float: left;
+                                position: relative;
+                                display: inline-block;
+                                cursor: pointer;
+                                text-align: center;
+                                width: 80px;
+                                height: 20px;
+                                line-height: 20px;
+                                font-size: 12px;
+                                color: #fff;
+                                background: #c8a985;
+                                border-radius: 10px;
+                        }
+                        span:last-child{
+                                float: right;
+                                width: 200px;
+                                height: 30px;
+                                position: relative;
+                                margin-top: 6px;
+                                cursor: pointer;
+                                i{
+                                        display: inline-block;
+                                        width: 27px;
+                                        height: 26px;
+                                        background: url(../images/149697742783_27x26.jpg) no-repeat;
+                                }
+                                b{
+                                        display: inline-block;
+                                        width: 12px;
+                                        height: 26px;
+                                        margin: 0px 2px;
+                                        background: url(../images/149761259453_12x26.png) no-repeat;
+                                }
+                                p{
+                                        position: absolute;
+                                        width: 120px;
+                                        top: 0;
+                                        left: 45px;
+                                        height: 26px;
+                                        line-height: 26px;
+                                        color: rgb(102,102,102);
+                                }
+                        }
+                }
+                .goodsinfo_top3{
+                    border-bottom: 1px dotted #bfbfbf;
+                    span{
+                        height: 40px;
+                        line-height: 30px;
+                        font-size: 12px;
+                        position: relative;
+                    }
+                    span:first-child{
+                        display: inline-block;
+                        width: 90px;
+                        padding-left: 10px;
+                    }
+                    span:nth-child(2){
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: #c8a985;
+                    }
+                    span:last-child{
+                            display: inline-block;
+                            padding-right: 20px;
+                    }
+                }
+                .goodsinfo_top4{
+                        padding-left: 13px;
+                        table{
+                            border: 0;
+                            border-collapse: collapse;
+                            outline: none;
+                            th,td{
+                                border: 0;
+                                i{
+                                        width: 50px;
+                                        height: 35px;
+                                        display: inline-block;
+                                        float: right;
+                                        cursor: pointer;
+                                        background: url(../images/brandstore_share.png) no-repeat -369px -283px;
+                                }
+                            }
+                            th{
+                                width: 80px;
+                                line-height: 35px;
+                            }
+                            td:nth-child(2){
+                                    width: 400px;
+                                    line-height: 28px;
+                                    color: #c8a985;
+                            }
+                        }
+                }
+                .goodsinfo_top5{
+                    margin-top: 15px;
+                    width: 100%;
+                    overflow: hidden;
+                    zoom: 1;
+                    .gd_dt {
+                        width: 80px;
+                        float: left;
+                        padding-left: 13px;
+                        text-align: left;
+                        overflow: hidden;
+                    }
+                    .gd_dd {
+                        width: 460px;
+                        min-width: 110px;
+                        float: left;
+                        position: relative;
+                        .color_size{
+                                float: left;
+                                margin: 0 13px 13px 0;
+                                position: relative;
+                                min-width: 32px;
+                                border: 1px solid #c9c9c9;
+                                a{
+                                        display: block;
+                                        /* border: 1px solid #ccc; */
+                                        padding: 3px 4px;
+                                        background-color: #fff;
+                                        text-align: center;
+                                        min-width: 22px;
+                                }
+                        }
+                        .ed{
+                            border: 1px solid #dc0000;
+                        }
+                    }
+                }
+                .goodsinfo_top6{
+                        padding-bottom: 30px;
+                        margin-top: 15px;
+                        border-bottom: 1px dotted #bfbfbf;
+                        .gd_dt {
+                        width: 80px;
+                        float: left;
+                        padding-left: 13px;
+                        text-align: left;
+                        overflow: hidden;
+                    }
+                    .gd_dd{
+                            width: 135px;
+                            min-width: 110px;
+                            float: left;
+                            position: relative;
+                            .buy_num{
+                                    width: 100%;
+                                    position: relative;
+                                    float: left;
+                                    a{
+                                        display: block;
+                                        width: 22px;
+                                        height: 22px;
+                                        position: absolute;
+                                        background-color: #c8a985 !important;
+                                    }
+                                    .btn_reduce{
+                                        left: 0px;
+                                        background: url(../images/brandstore_share.png) no-repeat -311px -292px;
+                                    }
+                                    .btn_add{
+                                        left: 72px;
+                                        background: url(../images/brandstore_share.png) no-repeat -268px -292px;
+                                    }
+                                    .buy_text{
+                                            display: block;
+                                            width: 42px;
+                                            height: 19px;
+                                            line-height: 19px;
+                                            vertical-align: middle;
+                                            font-weight: bold;
+                                            margin-left: 24px;
+                                            text-align: center;
+                                    }
+                            }
+                    }
+                }
+                .goodsinfo_top7{
+                    dl{
+                            width: 100%;
+                            display: inline-block;
+                            color: #999;
+                            dt{
+                                    display: block;
+                                    padding-left: 13px;
+                                    width: 80px;
+                                    float: left;
+                            }
+                            dd{
+                                    float: left;
+                                    display: block;
+                                    width: 422px;
+                                    a{
+                                        text-decoration: underline;
+                                        color: #c8a985;                                        
+                                    }
+                            }
+                    }
+                }
+                .goodsinfo_top8{
+                        position: relative;
+                        margin-top: 15px;
+                        width: 100%;
+                        overflow: hidden;
+                        zoom: 1;    
+                        .buy_btn{
+                                margin-left: 10px;
+                                height: 35px;
+                                float: left;
+                                a{
+                                    span{
+                                            display: inline-block;
+                                            font-size: 14px;
+                                            color: #c8a985;
+                                            line-height: 33px;
+                                            height: 33px;
+                                            width: 118px;
+                                            border: 1px solid #c8a985;
+                                            text-align: center;
+                                    }
+                                }
+                        }
+                        .car_btn{
+                                height: 35px;
+                                float: left;
+                                margin-left: 10px;
+                                position: relative;
+                                a{
+                                    span{
+                                            display: inline-block;
+                                            height: 35px;
+                                            line-height: 35px;
+                                            vertical-align: middle;
+                                            color: rgb(255, 255, 255);
+                                            font-size: 14px;
+                                            cursor: pointer;
+                                            padding: 0px 28px 0px 52px;
+                                            background: rgb(200, 169, 133);
+                                            border-width: 0px;
+                                            border-style: initial;
+                                            border-color: initial;
+                                            border-image: initial;
+                                    }
+                                    b{
+                                        width: 25px;
+                                        height: 35px;
+                                        left: 24px;
+                                        top: 0;
+                                        display: inline-block;
+                                        position: absolute;
+                                        background: url(../images/brandstore_share.png) no-repeat -270px -335px;
+                                    }
+                                }
+                        }
+                }
+            }
+            .right_a_bottom{
+                    padding-bottom: 20px;
+                    padding-top: 30px;
+                    height: 48px;
+                    font-size: 0;
+                    .right_a_bottom1{
+                            float: left;
+                            height: 48px;
+                            margin-right: 40px;
+                            cursor: pointer;
+                            i{
+                                    display: inline-block;
+                                    width: 48px;
+                                    height: 48px;
+                                    background-repeat: no-repeat;
+                                    background-size: 48px 48px;
+                                    margin-right: 16px;
+                                    float: left;
+                                    background: url(../images/guaranteed_warranty.png);
+                            }
+                            p{
+                                    float: left;
+                                    font-size: 14px;
+                                    color: #999;
+                                    margin: 0;
+                                    height: 48px;
+                                    line-height: 48px;
+                            }
+                    }
+                    .right_a_bottom2{
+                            float: left;
+                            height: 48px;
+                            margin-right: 40px;
+                            cursor: pointer;
+                        i{
+                                display: inline-block;
+                                width: 48px;
+                                height: 48px;
+                                background-repeat: no-repeat;
+                                background-size: 48px 48px;
+                                margin-right: 16px;
+                                float: left;
+                                background: url(../images/faith_enterprise.png);
+                        }
+                        p{
+                                float: left;
+                                font-size: 14px;
+                                color: #999;
+                                margin: 0;
+                                height: 48px;
+                                line-height: 48px;
+                        }
+                    }
+                    .right_a_bottom3{
+                            float: left;
+                            height: 48px;
+                            cursor: pointer;
+                        i{
+                                display: inline-block;
+                                width: 48px;
+                                height: 48px;
+                                background-repeat: no-repeat;
+                                background-size: 48px 48px;
+                                margin-right: 16px;
+                                float: left;
+                                background: url(../images/guarantee.png);
+                        }
+                        p{
+                                float: left;
+                                font-size: 14px;
+                                color: #999;
+                                margin: 0;
+                                height: 48px;
+                                line-height: 48px;
+                        }
+                    }
+            }
+    }
+}

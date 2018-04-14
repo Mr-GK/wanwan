@@ -1,0 +1,33 @@
+[{
+	"img":"../images/storesame/shenmengchen.jpg",
+	"p1":"新官网明星同款",
+	"p2":"Hermes爱马仕",
+	"p3":"沈梦辰同款 Constance系列"
+},[{
+		"title":"t1",
+		"child":[{
+			"img":"../images/storesame/152049762577_398x255.jpg",
+			"p1":"明星同款",
+			"p2":"Saint Laurent圣罗兰",
+			"p3":"张碧晨同款 红色链条包"
+		},{
+			"img":"../images/storesame/152049762542_398x255.jpg",
+			"p1":"明星同款",
+			"p2":"Chloe克洛伊",
+			"p3":"张怡同款 Nile 手提包"
+		}]
+	}],[{
+		"title":"t2",
+		"child":[{
+			"img":"../images/storesame/152049762533_398x255.jpg",
+			"p1":"明星同款",
+			"p2":"TOD'S 托德斯",
+			"p3":"刘诗诗同款 白色双肩包"
+		},{
+			"img":"../images/storesame/151833649542_398x255.jpg",
+			"p1":"明星同款",
+			"p2":"Miu Miu缪缪",
+			"p3":"唐艺昕同款 粉色拼色单肩包"
+		}]
+	}]
+]

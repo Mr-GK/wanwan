@@ -1,0 +1,289 @@
+//注册页
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,input,textarea,button,select{padding:0;margin:0}
+body{font:12px/20px "微软雅黑","simsun";color:#333;/*overflow-x:hidden;*/}
+img{vertical-align:middle;border:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none;color:#333;}
+a:visited{color:#666;}
+a:hover{color:#b28247 !important;}
+input:focus,textarea:focus,button:focus{outline: none;}
+input[type="button"],input[type="submit"],input[type="file"],input[type="reset"],button{cursor:pointer;}
+/*********************common***************************/
+.cl:after{content:"";display:block;clear:both;overflow:hidden;height:0;visibility:hidden;}
+.cl{zoom:1;}
+.gwidth{width: 1200px;margin: auto;}
+.text-overflow{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.block{display:block;}
+
+.login-header {
+        height: 98px;
+         .login-header-center {
+                width: 1210px;
+                height: 100%;
+                margin: 0 auto;
+                font-size: 0;
+                .fivelux-logo {
+                    display: inline-block;
+                    height: 98px;
+                    width: 244px;
+                    background-size: 244px 98px;
+                    background-repeat: no-repeat;
+                    background-image: url(../images/5luxlogo.jpg);
+            }
+            .header-line {
+                    display: inline-block;
+                    width: 2px;
+                    height: 44px;
+                    vertical-align: middle;
+                    background-color: #ccc;
+                    margin: 0 18px;
+            }
+            .header-text {
+                    display: inline-block;
+                    font-size: 22px;
+                    color: #999;
+                    vertical-align: middle;
+            }   
+            .header-right {
+                    float: right;
+                    display: table;
+                    *zoom: 1;
+                    *display: block;
+                    font-size: 0;
+                    height: 100%;
+                    i {
+                            display: inline-block;
+                            width: 19px;
+                            height: 19px;
+                            padding-right: 10px;
+                            background-image: url(../images/phone-logo.png);
+                            background-size: 19px 19px;
+                            background-repeat: no-repeat;
+                            vertical-align: middle;
+                    }
+                    p {
+                            display: inline-block;
+                            *zoom: 1;
+                            *display: block;
+                            color: #666;
+                            font-size: 13px;
+                            vertical-align: middle;
+                    }
+            }
+        }
+}
+.login-warpper{
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        .login-center-wp{
+                position: relative;
+                width: 1210px;
+                height: 524px;
+                background-repeat: no-repeat;
+                margin: 0 auto;
+                background-image: url(../images/login/login_background1.jpg);
+                padding: 30px 0;
+                background-size: 100% 584px;
+                .register-c-right{
+                        padding: 25px 30px;
+                        width: 340px;
+                        font-size: 0px;
+                        background-color: #fff;
+//                      width: 400px;
+                        float: right;
+                        margin-right: 40px;
+                        .rigister-title{
+                                padding: 25px 0;
+                                font-size: 20px;
+                                height: 20px;
+                                line-height: 20px;
+                                text-align: center;
+                                color: #000;
+                        }
+                        #Myform{
+                            .number{
+                                    margin-bottom: 8px;
+                                    padding: 0 19px;
+                                    width: 300px;
+                                    height: 48px;
+                                    border: 1px solid #ccc;
+                                    font-size: 14px;
+                            }
+                            .reg-errorTip{
+//                              height: 54px; 
+                                /* min-height: 16px; */
+                                display: table;
+                                .error_tip_mobile{
+                                        /* display: table-cell; */
+                                        display: none;
+                                        vertical-align: middle;
+                                        height: 14px;
+                                        padding: 10px 0px 10px 0px;
+                                        i{
+                                                display: inline-block;
+                                                width: 14px;
+                                                height: 14px;
+                                                background-size: 14px 14px;
+                                                background-repeat: no-repeat;
+                                                background-image: url(../images/login/close.png);
+                                                vertical-align: middle;
+                                                margin-right: 5px;
+                                        }
+                                        p{
+                                                font-size: 14px;
+                                                line-height: 14px;
+                                                height: 14px;
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                color: #f62b0f;
+                                        }
+                                }
+                            }
+                            .codeWarpper{
+                                    margin-top: 8px;
+                                    padding-bottom: 16px;
+                                    .textcode{
+                                            margin-right: 27px;
+                                            vertical-align: middle;
+                                            padding: 0 19px;
+                                            width: 142px;
+                                            height: 48px;
+                                            border: 1px solid #ccc;
+                                            font-size: 14px;
+                                    }
+                                    #get_phone_button{
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            width: 130px;
+                                            height: 50px;
+                                            line-height: 50px;
+                                            text-align: center;
+                                            background-color: #f2f2f2;
+                                            font-size: 14px;
+                                            cursor: pointer;
+                                    }
+                            }
+                            #pwd,#pwd2{
+                                    margin-bottom: 8px;
+                                    padding: 0 19px;
+                                    width: 300px;
+                                    height: 48px;
+                                    border: 1px solid #ccc;
+                                    font-size: 14px;
+                            }
+                            .seg-tip{
+                                    height: 54px;
+                                    display: none;
+                                    .seg-tip-box{
+                                            display: table-cell;
+                                            vertical-align: middle;
+                                            height: 14px;
+                                            i{
+                                                    display: inline-block;
+                                                    width: 14px;
+                                                    height: 14px;
+                                                    background-size: 14px 14px;
+                                                    background-repeat: no-repeat;
+                                                    background-image: url(../images/login/tan-log.png);
+                                                    vertical-align: middle;
+                                                    margin-right: 5px;
+                                            }
+                                            p{
+                                                    font-size: 14px;
+                                                    height: 14px;
+                                                    line-height: 14px;
+                                                    display: inline-block;
+                                                    vertical-align: middle;
+                                                    color: #999;
+                                            }
+                                    }
+                            }
+                            #pwd2{
+                                margin-top: 8px;
+                            }
+                            .password_error{
+                                    display: table;
+                                    #password_confirm_error{
+                                            /* display: table-cell; */
+                                            display: none;
+                                            vertical-align: middle;
+                                            height: 14px;
+                                            padding: 10px 0px 10px 0px;
+                                            i{
+                                                    display: inline-block;
+                                                    width: 14px;
+                                                    height: 14px;
+                                                    background-size: 14px 14px;
+                                                    background-repeat: no-repeat;
+                                                    background-image: url(../images/login/close.png);
+                                                    vertical-align: middle;
+                                                    margin-right: 5px;
+                                            }
+                                            p{
+                                                font-size: 14px;
+                                                line-height: 14px;
+                                                height: 14px;
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                color: #f62b0f;
+                                            }
+                                    }
+                            }
+                            .sub-btn{
+                                    transition: all linear 0.5s;
+                                    -moz-transition: all linear 0.5s;
+                                    -webkit-transition: all linear 0.5s;
+                                    -o-transition: all linear 0.5s;
+                                    /* display: inline-block; */
+                                    width: 340px;
+                                    height: 50px;
+                                    line-height: 50px;
+                                    text-align: center;
+                                    color: #fff;
+                                    background: #333;
+                                    margin: 18px 0 20px;
+                                    /* text-decoration: none; */
+                                    font-size: 18px;
+                                    border: none;
+                                    cursor: pointer;
+                            }
+                            .sub-btn:hover{
+                                    background: #900;
+                            }
+                            .rig-bottom{
+                                    height: 14px;
+                                    line-height: 14px;
+                                    padding-bottom: 30px;
+                                    label{
+                                        cursor: pointer;
+                                        display: inline-block;
+                                        height: 14px;
+                                        width: 14px;
+//                                      background-image: url(/vendor/images/5lux/login/new/is_yes_bg.png);
+                                        background-repeat: no-repeat;
+                                        background-size: 14px 14px;
+                                        vertical-align: middle;
+                                        margin-right: 5px;
+                                    }
+                                    p,a{
+                                            display: inline-block;
+                                            font-size: 13px;
+                                            height: 14px;
+                                            line-height: 14px;
+                                            vertical-align: middle;
+                                            color: #999;
+                                    }
+                                    .fir-link{
+                                        color: #333;
+                                    }
+                                    .sec-link{
+                                        float: right;
+                                        color: #ff9900;
+                                    }
+                            }
+                        }
+                }
+        }
+}

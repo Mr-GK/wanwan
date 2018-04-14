@@ -1,0 +1,40 @@
+[{
+	"img1":"../images/storesame/152212299485_366x515.jpg"
+},[{
+		"title":"t1",
+		"child":[{
+			"img":"../images/storesame/152280852198_1320x989_800x800.jpg",
+			"p1":"Jimmy Choo",
+			"p2":"吉米.丘",
+			"p3":"￥ 3795"
+		},{
+			"img":"../images/storesame/152280602691_880x1320_800x800.jpg",
+			"p1":"Stella McCartney",
+			"p2":"斯特拉.麦卡特尼",
+			"p3":"￥ 6322"
+		},{
+			"img":"../images/storesame/151364928951_800x800.jpg",
+			"p1":"Monse",
+			"p2":"",
+			"p3":"￥ 10804"	
+		}]
+	}],[{
+		"title":"t2",
+		"child":[{
+			"img":"../images/storesame/152280354744_989x1320_800x800.jpg",
+			"p1":"VETEMENTS",
+			"p2":"",
+			"p3":"￥ 2493"
+		},{
+			"img":"../images/storesame/8196_G_1282809947759.jpg",
+			"p1":"Girard-Perregaux",
+			"p2":"芝柏",
+			"p3":"￥ 105400"
+		},{
+			"img":"../images/storesame/152280322015_989x1320_800x800.jpg",
+			"p1":"DKNY",
+			"p2":"",
+			"p3":"￥ 2472"
+		}]
+	}]
+]

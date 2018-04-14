@@ -1,0 +1,965 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,input,textarea,button,select{padding:0;margin:0}
+body{font:12px/20px "微软雅黑","simsun";color:#333;/*overflow-x:hidden;*/}
+img{vertical-align:middle;border:0;}
+ul,ol{list-style:none;}
+a{text-decoration:none;color:#333;}
+a:visited{color:#666;}
+a:hover{color:#b28247 !important;}
+input:focus,textarea:focus,button:focus{outline: none;}
+input[type="button"],input[type="submit"],input[type="file"],input[type="reset"],button{cursor:pointer;}
+/*********************common***************************/
+.cl:after{content:"";display:block;clear:both;overflow:hidden;height:0;visibility:hidden;}
+.cl{zoom:1;}
+.gwidth{width: 1200px;margin: auto;}
+.text-overflow{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.block{display:block;}
+/************************************************/
+*{
+	margin:0;
+	padding:0;	
+}
+header{
+	width:100%;
+	text-align: center;
+	background: #4a0001;
+}
+//轮播图
+.sliderwall{
+    width: 100%;
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+    #sliderpic{
+        position: absolute;
+        width: 18820px;
+        height: 100%;
+        left:-1343px;
+        img{
+            width: 1343px;
+            float: left;
+        }
+    }
+    .sliderarrow{
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+            .sliderleft{
+                top: 200px;
+                left: 0px;
+                width: 29px;
+                height: 49px;
+                position: absolute;
+            }
+            .sliderright{
+                top: 200px;
+                right: 0px;
+                position: absolute;
+                width: 29px;
+                height: 49px;
+            }
+    }
+    .slidernav{
+        height: 16px;
+        position: absolute;
+        bottom: 50px;
+        left: 48%;
+        background: rgba(0,0,0,0.2);
+        border-radius: 10px;
+        z-index: 10;
+        .active{
+            background-color: red;
+        }
+        li{
+            width: 12px;
+            height: 12px;
+            display: block;
+            float: left;
+            margin: 2px 6px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    }
+}
+.cut{
+    width: 1210px;
+    margin: 0 auto;
+}
+.move1{
+    width: 1210px;
+    margin: 0 auto;
+    margin-top: 20px;
+    li{
+        float: left;
+        position: relative;
+        margin-right: 10px; 
+        .bgpic{
+            width: 234px;
+            height: 329px;
+            border: 0;
+        }       
+        .brand_box{
+            position: absolute;
+            bottom: 1px;
+            left: 30px;
+            width: 174px;
+            height: 154px;
+            overflow: hidden;
+            z-index: 1;
+            .brand_hide{
+                background-color: #fff;
+                width: 106px;
+                height: 154px;
+                position: absolute;
+                padding: 0 34px;
+                top:100px;
+                transition: .3s;
+                .brandlogopic{
+                    width: 60px;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                    margin-bottom: 3px;
+                    margin-left: 22px;
+                }
+                .splitline{
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    .blackbar{
+                        display: inline-block;
+                        width: 20px;
+                        height: 2px;
+                        background-color: #000000;
+                    }
+                }
+                .endbround,.cnbround{
+                    font-size: 14px;
+                    text-align: center;
+                    color: #000000;
+                }
+            }
+        }
+        &:hover .brand_hide{
+            top:0;
+        }
+    }
+    li:last-child{
+        margin-right: 0;  
+    }
+}
+//热门旗舰店
+.host_title{
+    width: 1210px;
+    margin: 0 auto;
+    img{
+        float: left;
+    }
+    .host_btn{
+        float: right;
+        padding-top: 23px;
+        padding-right: 15px;
+    }
+    span{
+        display: inline-block;
+        width: 8px;
+        height: 15px;
+    }
+    .hot_pre{
+        background: url(../images/share02.png) no-repeat -160px -384px;
+    }
+    .hot_next{
+        background: url(../images/share02.png) no-repeat -180px -384px;
+        margin-left: 20px;
+    }
+}
+//热门旗舰店下的图标
+.hotflag{
+    height: 180px;
+    width: 1210px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    .hotflagbox{
+        position: absolute;
+        width: 3630px;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        li{
+            float: left;
+            .hotflagson{
+                position: relative;
+                float: left;
+                width: 107px;
+                height: 55px;
+                padding: 14px 29px;
+                border: 1px solid #dfdfdf;
+                margin-right: 6px;
+                margin-bottom: 7px;
+                img{
+                    width: 107px;
+                    height: 54px;
+                }
+                .hostmiddle{
+                    position: absolute;
+                    left: 29px;
+                    top: 14px;
+                    opacity: 0;
+                    width: 107px;
+                    height: 42px;
+                    padding-top: 12px;
+                    background: #fff;
+                    .brandname{
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                    .blackline{
+                        text-align: center;
+                        margin-top: 5px;
+                        span{
+                            display: inline-block;
+                            width: 20px;
+                            height: 2px;
+                            background: #000;
+                        }
+                    }
+                }
+                .topline{
+                    width: 0;
+                    height: 1px;
+                    position: absolute;
+                    top: -1px;
+                    left: 0;
+                    background: #000;
+                }
+                .rightline{
+                    width: 1px;
+                    height: 0;
+                    position: absolute;
+                    bottom: -1px;
+                    right: -1px;
+                    background: #000;
+                }
+                .bottomline{
+                        width: 0;
+                        height: 1px;
+                        position: absolute;
+                        bottom: -1px;
+                        right: 0;
+                        background: #000;           
+                }
+                .leftline{
+                        width: 1px;
+                        height: 0;
+                        position: absolute;
+                        top: -1px;
+                        left: -1px;
+                        background: #000;
+                }
+            }
+        }
+    }
+}
+//海外生活
+.oversealife{
+    width: 1210px;
+    margin: 0 auto;
+}
+//海外生活列表
+.oversealife_list{
+    width: 1210px;
+    margin: 0 auto;
+    li{
+        float: left;
+        margin-right: 10px;
+        position: relative;
+        overflow: hidden;
+        i{
+            position: absolute;
+            left: -402px;
+            top: 0;
+            width: 313px;
+            height: 393px;
+            background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));
+            -webkit-transform: skewx(-25deg);
+            cursor: pointer;
+        }
+    }
+    li:last-child{
+        margin-right: 0;
+    }
+}
+//商场同款
+.storesame_title{
+    width: 1210px;
+    margin: 0 auto;
+}
+//商场同款列表
+.storesame_link{
+    width: 1210px;
+    margin: 0 auto;
+    height: 30px;
+    margin-bottom: 15px;
+    li{
+        float: left;
+        width: 398px;
+        height: 30px;
+        background: #999;
+        color: #fff;
+        line-height: 30px;
+        text-align: center;
+        font-size: 14px;
+        margin-right: 8px;
+    }
+    li:last-child{
+        margin-right: 0;
+    }
+    .active{
+        background-color: rgb(0, 0, 0);
+    }
+}
+//  商场同款切换
+.storesame{
+    overflow: hidden;
+    width: 1210px;
+    margin: 0 auto;
+    height: 517px;
+    position: relative;
+    .storesame_box{
+        position: absolute;
+        left: 0;
+        width: 9999px;
+        li{
+            float: left;
+            overflow: hidden;
+            .storesameb_left,.storesameb1_left{
+                float: left;
+            }
+            .storesameb_right,.storesameb1_right{
+                float: left;
+                margin-left: 9px;
+                .storesameb_top,.storesameb1_top{
+                    overflow: hidden;
+                    margin-bottom: 8px;
+                    .storesame_top1{
+                            width: 222px;
+                            height: 248px;
+                            text-align: center;
+                            border: 1px solid #ccc;
+                            overflow: hidden;
+                            float: left;
+                            margin-right: 8px;
+                            .storesametoptxt{
+                                    left: 0;
+                                    font-size: 13px;
+                                    color: #666;
+                                    display: inline-block;
+                                    position: relative;
+                                    transition: .3s;
+                            }
+                            .storesametoppic{
+                                    text-align: center;
+                                    position: relative;
+                                    right: 0;  
+                                    transition: .3s;
+                                    img{
+                                        width: 150px;
+                                    }
+                            }
+                    }
+                    .storesame_top1:hover .storesametoptxt{
+                        left: -20px;
+                    }
+                    .storesame_top1:hover .storesametoppic{
+                        right: -20px;
+                    }
+                    .storesame_top1:nth-child(2),{
+                            overflow: hidden;
+                            border: 1px solid #ccc;
+                            text-align: center;
+                            width: 367px;
+                            height: 248px;
+                            float: left;
+                            margin-right: 7px;
+                            .storesametoptxt{
+                                left: 0;
+                                float: left;
+                                font-size: 13px;
+                                margin-top: 20px;
+                                margin-left: 70px;
+                                color: #666;
+                                display: inline-block;
+                                position: relative;
+                                transition: .3s;
+                            }
+                            .storesametoppic{
+                                float: left;
+                                position: relative;
+                                margin-top: 28px;
+                                right: 0;
+                                transition: .3s;
+                                img{
+                                    width: 180px;
+                                }
+                            }    
+                    }
+                    .storesame_top2:hover .storesametoptxt{
+                        left: -20px;
+                    }
+                    .storesame_top2:hover .storesametoppic2{
+                        right: -20px;
+                    }
+                    .storesame_top1{
+                            width: 222px;
+                            height: 248px;
+                            text-align: center;
+                            border: 1px solid #ccc;
+                            overflow: hidden;
+                            float: left;
+                            margin-right: 8px;
+                            .storesametoptxt{
+                                    left: 0;
+                                    font-size: 13px;
+                                    color: #666;
+                                    display: inline-block;
+                                    position: relative;
+                                    transition: .3s;
+                            }
+                            .storesametoppic{
+                                    text-align: center;
+                                    position: relative;
+                                    right: 0;  
+                                    transition: .3s;
+                                    img{
+                                        width: 150px;
+                                    }
+                            }
+                    }
+                    .storesame_top1:hover .storesametoptxt{
+                        left: -20px;
+                    }
+                    .storesame_top1:hover .storesametoppic{
+                        right: -20px;
+                    }
+                    
+                }
+                .storesameb_bottom,.storesameb1_bottom{
+                    overflow: hidden;
+                    .storesamebottom1{
+                            margin-right: 7px;
+                            border: 1px solid #ccc;
+                            float: left;
+                            width: 271px;
+                            height: 255px;
+                            overflow: hidden;
+                            .storesametoptxt{
+                                    text-align: center;
+                                    position: relative;
+                                    left: 0;
+                                    transition: .3s;
+                            }
+                            .storesametoppic{
+                                    text-align: center;
+                                    position: relative;
+                                    left: 0;
+                                    transition: .3s;
+                                    img{
+                                        width: 150px;
+                                    }
+                            }
+                    }
+                    .storesamebottom1:hover .storesametoptxt{
+                        left: -20px;
+                    }
+                    .storesamebottom1:hover .storesametoppic{
+                        left: 20px;
+                    }
+                }
+            }
+            .darwin{
+                width: 398px;
+                display: inline-block;
+                height: 520px;
+                overflow: hidden;
+                position: relative;
+                dd{
+                    width: 100%;
+                    display: block;
+                    height: 520px;
+                    overflow: hidden;
+                }
+                dt{
+                    width: 398px;
+                    height: 520px; 
+                    display: block;
+                    position: absolute;
+                    overflow: hidden;
+                    background-color: #000000;
+                    border: 1px solid #FFF;
+                    transition: opacity 0.35s, transform 0.35s;
+                    opacity: 0;
+                    transform: rotateY(90deg);
+                    left: 0;
+                    top: 0;
+                    ul{
+                            display: block;
+                            width: 260px;
+                            height: 120px;
+                            padding-top: 20px;
+                            margin: 190px auto;
+                            font-size: 18px;
+                            border: 1px solid #fff;
+                            cursor: pointer;
+                            li{
+                                    display: block;
+                                    width: 100%;
+                                    text-align: center;
+                                    line-height: 28px;
+                                    color: #fff;
+                                    b{
+                                            display: block;
+                                            width: 18px;
+                                            height: 3px;
+                                            background-color: #fff;
+                                            margin: 10px auto;
+                                    }
+                                    span{
+                                        font-size: 14px;
+                                    }
+                            }
+                    }
+                }
+                .darwin_two{
+                    clear: both;
+                    float: none;
+                    padding-bottom: 10px;
+                    position: relative;
+                    dd{
+                        width: 100%;
+                        display: block;
+                        height: 256px;
+                        overflow: hidden;
+                    }
+                    dt{
+                        width: 398px;
+                        display: block;
+                        height: 256px;
+                        background-color: #000000;
+                        position: absolute;
+                        overflow: hidden;
+                        border: 1px solid #FFF;
+                        transition: opacity 0.35s, transform 0.35s;
+                        opacity: 0;
+                        transform: rotateY(90deg);
+                        left: 0;
+                        top: 0;
+                        ul{
+                            display: block;
+                            width: 260px;
+                            height: 120px;
+                            padding-top: 20px;
+                            margin: 40px auto;
+                            font-size: 18px;
+                            border: 1px solid #fff;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .darwin_two dl:hover dt{
+                    color: white;
+                    opacity:.7;
+                    transform: rotateY(0deg);
+                }
+            }
+            .darwin dl:hover dt{
+                color: white;
+                opacity: .7;
+                transform: rotateY(0deg);
+            }
+        }
+    }
+}
+//购物中心
+.shopmall{
+    width: 1210px;
+    margin: 0 auto;
+}
+//购物中心切换
+.shopcenter{
+    width: 1210px;
+    margin: 0 auto;
+    overflow: hidden;
+       li{
+            float: left;
+            width: 234px;
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            margin-right: 8px;
+                .shopcenterbox{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 234px;
+                    height: 100px;
+                    transition: .3s;
+                        .topbox{
+                            width: 234px;
+                            height: 50px;
+                            line-height: 50px;
+                            background: #999;
+                            text-align: center;
+                            font-size: 14px;
+                            color: #fff;
+                        }
+                        .bottombox{
+                                width: 234px;
+                                height: 40px;
+                                padding: 5px;
+                                background: #333;
+                                color: #fff;
+                                text-align: center;
+                                font-size: 14px;
+                                .border{
+                                        border: 1px solid #fff;
+                                        width: 223px;
+                                        height: 40px;
+                                        .en{
+                                                margin-top: 10px;
+                                        }
+                                }
+                        }
+                }
+                .shopcenterbox:hover{
+                    top: -50px;
+                }
+        }
+}
+//经典箱包
+.bagstitle{
+    width: 1210px;
+    margin: 0 auto;
+    overflow: hidden;
+    img{
+            float: left;
+    }
+    .rightbtn{
+            float: right;
+            overflow: hidden;
+            height: 60px;
+            line-height: 60px;
+            .icon{
+                    float: right;
+                    background: url(../images/share02.png) no-repeat -470px -360px;
+                    width: 18px;
+                    height: 60px;
+                    margin-left: 6px;
+            }
+            .moretxt{
+                    float: right;
+                    font-size: 16px;
+            }
+    }
+}
+//箱包列表
+.bags{
+    width: 1210px;
+    margin: 0 auto;
+    .bags1{
+        float: left;
+        width: 220px;
+        height: 366px;
+        border: 1px solid #ccc;
+        padding: 0 9px;
+        padding-top: 4px;
+        margin-right: 8px;
+        .baglinks{
+                overflow: hidden;
+                border-bottom: 1px dashed #d4d4d4;
+                padding-bottom: 16px;
+                li{
+                        float: left;
+                        line-height: 36px;
+                        width: 110px;
+                        font-size: 14px;
+                        color: #666;
+                        text-align: left;
+                }
+        }
+        .bagslider{
+                overflow: hidden;
+                width: 100%;
+                height: 150px;
+                margin-top: 14px;
+                .bagwarpper{
+                        max-width: 100%;
+                        position: relative;
+                        margin: 0 auto;
+                        padding: 0;
+                        .bagviewport{
+                                width: 100%;
+                                overflow: hidden;
+                                position: relative;
+                                height: 114px;
+                                    .bagsliderbox{
+                                        width: 515%;
+                                        position: relative;
+                                        transition-duration: 0s;
+                                        transform: translate3d(0px, 0px, 0px);
+                                        li{
+                                                float: left;
+                                                list-style: none;
+                                                position: relative;
+                                                width: 220px;
+                                                height: 114px;
+                                                overflow: hidden;
+                                                img{
+                                                        width: 107px;
+                                                        height: 54px;
+                                                        float: left;
+                                                        margin-right: 2px;
+                                                        border: none !important;
+                                                        width: 90px !important;
+                                                        height: auto !important;
+                                                        margin-bottom: 12px !important;
+                                                        margin-left: 12px !important;
+                                                        max-width: 100%;
+                                                        display: block;
+                                                }
+                                        }
+                                }
+                        }
+                        .bagcontrols{
+                            .bagpagers{
+                                    text-align: center;
+                                    font-family: Arial;
+                                    font-weight: bold;
+                                    color: #666;
+                                    padding-top: 1em;
+                                    padding-bottom: 1em;
+                                    position: absolute;
+                                    /* bottom: -30px; */
+                                    width: 100%;
+                                    .bagpageitem{
+                                        display: inline-block;
+                                        a{
+//                                              background: #c77f40;
+                                                background: #666;
+                                                text-indent: -9999px;
+                                                display: block;
+                                                height: .75em;
+                                                width: .75em;
+                                                margin: 0 5px;
+                                                outline: 0;
+                                                -moz-border-radius: 50%;
+                                                -webkit-border-radius: 50%;
+                                                border-radius: 50%;
+                                        }
+                                    }
+                            }
+                            .bagdirections{
+                                a{
+                                        position: absolute;
+                                        top: 50%;
+                                        margin-top: -16px;
+                                        outline: 0;
+                                        width: 32px;
+                                        height: 32px;
+                                        text-indent: -9999px;
+                                        z-index: 9999;
+                                }
+                                .Prev{
+                                        width: 8px!important;
+                                        height: 14px!important;
+                                        top: 127%!important;
+                                        left: 65px!important;
+                                        background: url(../images/share02.png) no-repeat -239px -384px!important;
+                                }
+                                .Next{
+                                        width: 8px!important;
+                                        height: 14px!important;
+                                        top: 127%!important;
+                                        right: 65px!important;
+                                        background: url(../images/share02.png) no-repeat -267px -384px!important;
+                                }
+                            }
+                        }
+                }
+        }
+}
+.bags2{
+        float: left;
+        width: 390px;
+        height: 370px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        margin-right: 8px;
+        .bag2warpper{
+            width: 100%;
+            margin: 0 auto;
+            .bag2viewport{
+                    width: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    height: 370px;
+                    .bag2slider{
+                            width: 315%;
+                            position: relative;
+                            transition-duration: 0s;
+                            transform: translate3d(0px, 0px, 0px);
+                            li{
+                                float: left;
+                                list-style: none;
+                                position: relative;
+                                width: 390px;
+                                .slider_bord{
+                                        width: 250px;
+                                        height: auto;
+                                        padding-bottom: 5px;
+                                        position: absolute;
+                                        bottom: 10px;
+                                        left: 50%;
+                                        margin-left: -125px;
+                                        background: url(../images/darwin_mask_bgfff.png);
+                                        dl{
+                                            padding-top: 5px;
+                                            dd{
+                                                    width: 100%;
+                                                    text-align: center;
+                                                    font-size: 13px;
+                                                    b{
+                                                            width: 20px;
+                                                            height: 2px;
+                                                            display: block;
+                                                            margin: 5px auto;
+                                                            background-color: #000;
+                                                    }
+                                            }
+                                            dt{
+                                                    width: 100%;
+                                                    text-align: center;
+                                                    font-size: 17px;
+                                                    line-height: 17px;
+                                            }
+                                        }
+                                }
+                            }
+                    }
+            }
+        }
+}
+.bags3{
+        overflow: hidden;
+        height: 372px;
+        .bags3pic1{
+                float: left;
+                width: 276px;
+                height: 189px;
+                margin-right: 7px;
+                img{
+                    width: 275px;
+                    display: inline;
+                    border: 1px solid #ccc;
+                }
+        }
+        .bags3pic2{
+                float: left;
+                width: 276px;
+                height: 189px;
+                img{
+                    width: 275px;
+                    display: inline;
+                    border: 1px solid #ccc;
+                }
+        }
+}
+}
+//主题活动
+.promotiontitle{
+    width: 1210px;
+    margin: 0 auto;
+}
+//主题活动详情
+.promotiontitlebox{
+    width: 1210px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    .promotiontitle1,.promotiontitle2,.promotiontitle3{
+            overflow: hidden;
+            margin-bottom: 10px;
+            .promotion1pic{
+                float: left;
+            }
+            .promotion1pic:first-child{
+                width: 610px;
+                height: 295px;
+            }
+            .promotion1pic:nth-child(2){
+                    width: 305px;
+                    height: 295px;
+            }
+    }
+    .promotiontitle2{
+        .promotion1pic{
+            float: left;
+        }
+        .promotion1pic:first-child,.promotion1pic:nth-child(2){
+                width: 305px;
+                height: 295px;
+        }
+    }        
+    .promotiontitle3{
+        .proleft{
+            float: left;
+            overflow: hidden;
+            width: 610px;
+            .proleftpic{
+                    float: left;
+                    width: 203px;
+                    height: 73px;
+                    .proleftpicbox{
+                        width: 192px;
+                        height: 63px;
+                        border: 1px solid #ccc;
+                        position: relative;
+                        .topline{
+                                position: absolute;
+                                top: -1px;
+                                left: -1px;
+                                width: 0;
+                                height: 1px;
+                                background: #000;
+                        }
+                        .rightline{
+                                position: absolute;
+                                bottom: 0;
+                                right: -1px;
+                                width: 1px;
+                                height: 0;
+                                background: #000;
+                        }
+                        .bottomline{
+                                position: absolute;
+                                bottom: -1px;
+                                right: 0;
+                                width: 0;
+                                height: 1px;
+                                background: #000;
+                        }
+                        .leftline{
+                                position: absolute;
+                                left: -1px;
+                                top: -1px;
+                                width: 1px;
+                                height: 0;
+                                background: #000;
+                        }
+                    }
+            }
+        }
+        .proright{
+            float: left;
+        }            
+    }  
+}
